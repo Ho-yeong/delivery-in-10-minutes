@@ -13,6 +13,7 @@ default-theme = "light"
 preferred-dark-theme = "navy"
 git-repository-url = "https://github.com/Ho-yeong/delivery-in-10-minutes"
 additional-css = ["src/custom.css"]
+no-section-label = true
 
 [output.html.fold]
 enable = true
