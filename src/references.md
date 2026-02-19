@@ -139,14 +139,3 @@
 
 ---
 
-<!-- 교차검증 완료 (2026-02-14)
-- [v] Reuters 아마존 AI 기사 URL
-- [v] LinkedIn → Krebs on Security로 대체 (LinkedIn 공식 블로그 접근 불가)
-- [v] Smithsonian 전시 페이지 URL
-- [v] GitLab postmortem URL
-
-교차검증 재확인 (2026-02-19)
-- [v] 12개 챕터 URL 출처 각주 20개 전수 확인 — 전부 references.md에 포함
-- [v] 저자 통독 추가 각주(ch05 봇넷 등)는 용어 설명이므로 references.md 업데이트 불필요
-- [v] 형식 일관성 확인 (테이블 구조, 마크다운 링크)
--->
