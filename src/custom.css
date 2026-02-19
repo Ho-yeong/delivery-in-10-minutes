@@ -4,7 +4,7 @@
 }
 
 .content {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     line-height: 1.9;
     word-break: keep-all;
     overflow-wrap: break-word;
@@ -19,7 +19,7 @@
 
 /* 챕터 부제 (h1 바로 다음의 h2 "터치스크린, 디스플레이...") */
 .content h1 + h2 {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: normal;
     color: var(--sidebar-non-existant);
     margin-top: -0.3em;
@@ -44,7 +44,7 @@
     padding: 0.8em 1.2em;
     margin: 1.2em 0;
     border-radius: 0 6px 6px 0;
-    font-size: 0.98rem;
+    font-size: 1.1rem;
     line-height: 1.8;
 }
 
@@ -55,7 +55,7 @@ pre {
 }
 
 pre code {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     line-height: 1.55;
     font-family: "D2Coding", "Noto Sans Mono", "Consolas", "Monaco", monospace;
 }
@@ -63,13 +63,13 @@ pre code {
 /* 다이어그램 캡션: [그림 X-Y] 텍스트 */
 .content p:has(+ pre) {
     color: var(--sidebar-non-existant);
-    font-size: 0.92rem;
+    font-size: 1rem;
     margin-bottom: 0.3em;
 }
 
 /* ===== 각주 ===== */
 .content .footnote-definition {
-    font-size: 0.88rem;
+    font-size: 1rem;
     line-height: 1.65;
     margin-bottom: 0.6em;
     padding-left: 1.8em;
@@ -95,7 +95,7 @@ sup.footnote-reference a {
 
 /* ===== 표 ===== */
 .content table {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     margin: 1em 0;
 }
 
@@ -107,7 +107,7 @@ sup.footnote-reference a {
 .content :not(pre) > code {
     padding: 0.15em 0.35em;
     border-radius: 3px;
-    font-size: 0.9em;
+    font-size: 0.95em;
 }
 
 /* ===== 사이드바 파트 제목 ===== */
@@ -125,12 +125,12 @@ sup.footnote-reference a {
 /* ===== 모바일 대응 ===== */
 @media (max-width: 600px) {
     .content {
-        font-size: 1rem;
+        font-size: 1.1rem;
         line-height: 1.8;
     }
 
     pre code {
-        font-size: 0.78rem;
+        font-size: 0.88rem;
         line-height: 1.45;
     }
 
