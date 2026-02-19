@@ -1,34 +1,140 @@
-/* 한글 가독성 개선 */
+/* ===== 한글 가독성 기본 설정 ===== */
 :root {
     --content-max-width: 820px;
 }
 
 .content {
     font-size: 1.05rem;
-    line-height: 1.85;
+    line-height: 1.9;
     word-break: keep-all;
+    overflow-wrap: break-word;
 }
 
-h1 {
+/* ===== 제목 계층 ===== */
+.content h1 {
     border-bottom: 2px solid var(--sidebar-bg);
-    padding-bottom: 0.3em;
+    padding-bottom: 0.4em;
+    margin-bottom: 0.6em;
 }
 
-/* 각주 스타일 */
-.footnote-definition {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    margin-bottom: 0.5em;
-}
-
-/* ASCII 다이어그램 가독성 */
-pre code {
-    font-size: 0.88rem;
-    line-height: 1.5;
-}
-
-/* 부제 스타일 */
-.content > h1:first-child + p:first-of-type {
+/* 챕터 부제 (h1 바로 다음의 h2 "터치스크린, 디스플레이...") */
+.content h1 + h2 {
     font-size: 1.1rem;
-    color: #666;
+    font-weight: normal;
+    color: var(--sidebar-non-existant);
+    margin-top: -0.3em;
+    margin-bottom: 1.2em;
+    border-bottom: none;
+}
+
+.content h2 {
+    margin-top: 2.2em;
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid var(--table-border-color);
+}
+
+.content h3 {
+    margin-top: 1.6em;
+}
+
+/* ===== 블록쿼트 (서사 장면 + "이번 장에서 알게 될 것") ===== */
+.content blockquote {
+    border-left: 4px solid var(--sidebar-active);
+    background: var(--quote-bg);
+    padding: 0.8em 1.2em;
+    margin: 1.2em 0;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.98rem;
+    line-height: 1.8;
+}
+
+/* ===== ASCII 다이어그램 (코드블록) ===== */
+pre {
+    border-radius: 6px;
+    margin: 1em 0 1.5em 0;
+}
+
+pre code {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    font-family: "D2Coding", "Noto Sans Mono", "Consolas", "Monaco", monospace;
+}
+
+/* 다이어그램 캡션: [그림 X-Y] 텍스트 */
+.content p:has(+ pre) {
+    color: var(--sidebar-non-existant);
+    font-size: 0.92rem;
+    margin-bottom: 0.3em;
+}
+
+/* ===== 각주 ===== */
+.content .footnote-definition {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    margin-bottom: 0.6em;
+    padding-left: 1.8em;
+    text-indent: -1.8em;
+}
+
+.content .footnote-definition p {
+    display: inline;
+}
+
+sup.footnote-reference a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--sidebar-active);
+}
+
+/* ===== 구분선 ===== */
+.content hr {
+    border: none;
+    border-top: 1px solid var(--table-border-color);
+    margin: 2em 0;
+}
+
+/* ===== 표 ===== */
+.content table {
+    font-size: 0.95rem;
+    margin: 1em 0;
+}
+
+.content table th {
+    background: var(--quote-bg);
+}
+
+/* ===== 인라인 코드 ===== */
+.content :not(pre) > code {
+    padding: 0.15em 0.35em;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+/* ===== 사이드바 파트 제목 ===== */
+.sidebar .chapter li.part-title {
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+    margin-top: 1.2em;
+}
+
+/* ===== HTML 주석 숨김 (이미 숨겨지지만 안전장치) ===== */
+.content comment {
+    display: none;
+}
+
+/* ===== 모바일 대응 ===== */
+@media (max-width: 600px) {
+    .content {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    pre code {
+        font-size: 0.78rem;
+        line-height: 1.45;
+    }
+
+    .content blockquote {
+        padding: 0.6em 0.8em;
+    }
 }
