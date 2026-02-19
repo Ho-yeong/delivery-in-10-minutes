@@ -1,0 +1,19 @@
+[book]
+title = "배달 완료까지 10분"
+description = "주문 버튼 너머의 컴퓨터 과학"
+authors = ["Ho-yeong"]
+language = "ko"
+src = "src"
+
+[build]
+build-dir = "book"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/Ho-yeong/delivery-in-10-minutes"
+additional-css = ["src/custom.css"]
+
+[output.html.fold]
+enable = true
+level = 0
