@@ -83,13 +83,21 @@ figcaption {
 
 /* ===== 각주 ===== */
 .content .footnote-definition {
-    padding-left: 1.8em;
-    text-indent: -1.8em;
-    margin-bottom: 0.6em;
+    position: relative;
+    padding-left: 2em;
+    margin-bottom: 0.8em;
+    font-size: 0.9em;
+}
+
+.content .footnote-definition sup.footnote-definition-label {
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .content .footnote-definition p {
     display: inline;
+    margin: 0;
 }
 
 sup.footnote-reference a {
